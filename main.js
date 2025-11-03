@@ -89,8 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('search-done');
         container.textContent = 'Searching...';
 
-        const target = 'https://www.gov.uk/api/local-authority?postcode=' + encodeURIComponent(postcode);
-        const url = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(target);
+        const url = 'https://www.transinformed.co.uk/api/pass-thru?query=https://www.gov.uk/api/local-authority?postcode=' + encodeURIComponent(postcode);
 
         try {
             const result = await fetchJsonOrDetectHtml(url);
@@ -137,8 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (!slug) return;
                     container.textContent = 'Loading authority data...';
 
-                    const authTarget = 'https://www.gov.uk/api/local-authority/' + encodeURIComponent(slug);
-                    const authUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(authTarget);
+                    const authUrl = 'https://www.transinformed.co.uk/api/pass-thru?query=https://www.gov.uk/api/local-authority/' + encodeURIComponent(slug);
 
                     try {
                         const authResult = await fetchJsonOrDetectHtml(authUrl);
