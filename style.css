@@ -76,6 +76,7 @@ footer {
     justify-content: center;
     /* center providers inside area */
     align-items: flex-start;
+    overflow-wrap: anywhere
 }
 
 /* provider card styling - compact, centered content */
@@ -93,6 +94,7 @@ footer {
     border: 1px solid #ececec;
     box-sizing: border-box;
 }
+
 
 /* links and text */
 a {
@@ -166,6 +168,6 @@ body:not(.search-done) #areas h2 {
     display: none;
 }
 
-.bea{
+.bea {
     text-decoration: none;
 }
