@@ -1,5 +1,7 @@
 import csv
 import os
+import re
+from phonenumbers import format_number, parse
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from htmlmin import minify as htmlminify
 
@@ -75,6 +77,17 @@ def render(areas):
         trim_blocks=True,
         lstrip_blocks=True,
     )
+
+    def format_phone(digits):
+        if digits:
+            print(digits)
+            digits = parse(digits, "GB")
+            return str(format_number(digits, 2))
+        # fallback
+        return digits.strip()
+
+    env.filters["format_phone"] = format_phone
+
     tmpl = env.get_template(TEMPLATE_NAME)
     return tmpl.render(areas=areas)
 

@@ -52,10 +52,10 @@
                         {% endif %}
 
                         {% if p.phone %}
-                        <div class="provider-phone">Phone: <a href="tel:{{ p.phone }}">{{ p.phone }}</a></div>
+                        <div class="provider-phone">Phone:<br><a href="tel:{{ p.phone }}">{{ p.phone | format_phone }}</a></div>
                         {% endif %}
                         {% if p.email %}
-                        <div class="provider-email">Email: <a href="mailto:{{ p.email }}">{{ p.email }}</a></div>
+                        <div class="provider-email">Email:<br><a href="mailto:{{ p.email }}">{{ p.email }}</a></div>
                         {% endif %}
 
                         {% if p.services %}
