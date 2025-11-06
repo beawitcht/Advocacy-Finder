@@ -33,7 +33,7 @@ header,
 footer {
     max-width: 680px;
     text-align: center;
-    margin: 8px 0;
+    margin: 8px 8px;
 }
 
 /* sections */
