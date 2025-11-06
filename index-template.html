@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Advocacy Finder - England</title>
+    <meta name="description"
+        content="Find statutory advocacy services in England, covering Mental Health, Mental Capacity, Care Act, and Health complaints Advocacy for each authority area.">
+    <title>Who is my advocacy provider in England?</title>
     <link rel="stylesheet" href="style.css" />
     <script src="main.min.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,9 +17,11 @@
 
 <body>
     <header>
-        <h1>Advocacy Service Search - England</h1>
-        <p>Find statutory advocacy services in your local area.</p>
-        <p><a href="about.html">About this service</a></p>
+        <h1>Advocacy Provider Search - England</h1>
+        <h2>Find statutory advocacy services in your area.</h2>
+        <p>Covering Indpendent Mental Health (IMHA), Mental Capacity (IMCA), Care Act (ICAA), and Health Complaints
+            (IHCA) Advocacy across England</p>
+        <p><a href="about.html">About this service and FAQ</a></p>
     </header>
 
     <main>
@@ -52,7 +56,8 @@
                         {% endif %}
 
                         {% if p.phone %}
-                        <div class="provider-phone">Phone:<br><a href="tel:{{ p.phone }}">{{ p.phone | format_phone }}</a></div>
+                        <div class="provider-phone">Phone:<br><a href="tel:{{ p.phone }}">{{ p.phone | format_phone
+                                }}</a></div>
                         {% endif %}
                         {% if p.email %}
                         <div class="provider-email">Email:<br><a href="mailto:{{ p.email }}">{{ p.email }}</a></div>
@@ -74,7 +79,8 @@
     </main>
 
     <footer>
-        <span><a class="bea" href="https://beawitcht.carrd.co/" target="_blank" rel="noopener noreferrer">Developed by Bea 💜</a></span><br>
+        <span><a class="bea" href="https://beawitcht.carrd.co/" target="_blank" rel="noopener noreferrer">Developed by
+                Bea 💜</a></span><br>
         <span>©️ Knowledge belongs to all without limits</span>
     </footer>
 </body>
