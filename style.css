@@ -31,7 +31,7 @@ main {
 /* header/footer center */
 header,
 footer {
-    width: 100%;
+    max-width: 680px;
     text-align: center;
     margin: 8px 0;
 }
