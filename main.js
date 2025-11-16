@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const authData = authResult.json;
                         if (authData && authData.local_authority) {
                             const keepName = pickDisplayNameFromLocalAuthority(authData.local_authority);
-                            container.innerHTML = `<pre>Authority: ${keepName || 'Unknown'}\n\n${JSON.stringify(authData, null, 2)}</pre>`;
+                            container.innerHTML = `<pre>Authority: ${keepName || 'Unknown'}</pre>`;
                             showMatches(keepName);
                         }
                     } catch (err) {
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // no addresses path: data may include local_authority directly
             if (data && data.local_authority) {
                 const keepName = pickDisplayNameFromLocalAuthority(data.local_authority);
-                container.innerHTML = `<pre>Authority: ${keepName || 'Unknown'}\n\n${JSON.stringify(data, null, 2)}</pre>`;
+                container.innerHTML = `<pre>Authority: ${keepName || 'Unknown'}</pre>`;
                 showMatches(keepName);
             }
         } catch (err) {
