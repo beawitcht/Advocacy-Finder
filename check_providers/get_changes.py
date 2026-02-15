@@ -190,7 +190,7 @@ def main(timeout: int = 10):
             results[child.name] = {"changed": True, "detail": summary}
             # send discord notification if webhook configured
             try:
-                _send_discord(f"Changes detected for {child.name}: {summary}")
+                _send_discord(f"{summary}")
             except Exception:
                 pass
         else:
